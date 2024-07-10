@@ -30,10 +30,19 @@ build application
 run application (from binary)
 >> ./journey
 
-# GitHub
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/evandrolugli/devops-go.git
-git push -u origin main
+### Docker Commands
+
+build the image
+>> docker build -t nlw-journey-go:v1
+
+>> docker image ls (list image)
+
+run the container
+>> docker run -d -p 8080:8080 nlw-journey-go:v2
+
+>> docker ps
+>> docker ps -a
+>> docker logs 284841de58fc
+
+>> docker-compose up --build -d (default yml file)
+>> docker-compose -f docker-compose.yml up --build -d (specific yml file)
